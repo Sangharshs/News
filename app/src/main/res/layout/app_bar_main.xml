@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllActivities.MainActivity">
+
+     <androidx.appcompat.widget.LinearLayoutCompat
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@drawable/nav_bg"/>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#99000000"
+            >
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_marginEnd="7dp"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/menu_24"/>
+           <TextView
+               android:layout_marginStart="10dp"
+               android:textAlignment="center"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/app_name"
+               android:textColor="@color/white"
+               android:textSize="22sp"
+              />
+        </androidx.appcompat.widget.Toolbar>
+
+     <include layout="@layout/content_main"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:layout_gravity="bottom"
+       android:id="@+id/bottomNavView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:menu="@menu/bottom_nav_menu"
+       app:itemIconTint="@color/purple_500"
+       android:background="@color/purple_700"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

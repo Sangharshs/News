@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#99000000"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:backgroundTint="@color/white"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_bg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <EditText
+        android:id="@+id/searchEditext"
+        android:padding="5dp"
+        android:hint="Search Book"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:drawableRight="@drawable/ic_search"
+        android:drawableTint="@color/black"
+        android:layout_height="40dp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"/>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/roubded_top">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:theme="@style/Theme.AppCompat.WhiteAccent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/categoryRecyclerView"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
